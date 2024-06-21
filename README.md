@@ -1,5 +1,4 @@
-# network-controlled-counter
-Network Controlled Counter:
+Network Controlled Countdown timer:
 It is a simple project that gives developers some basic ideas about application development. Software should be modular and simple. Each module will be created as a separate process, and any IPC mechanism will be used to communicate between processes.
 
 
@@ -21,18 +20,20 @@ struct data_packet
     int end_frame;
 }
 ```
-    - Shall perform basic validation on data packets received, if the data packet is valid forward commands one by one to the Counter manager.
+.
+    - Shall perform basic validation on data packets received, if the data packet is valid forward commands one by one to the Countdown manager.
    
-2. Counter Manager:
-    - Shall initialize counter with the default configuration
-    - Shall accept the command from `Network Command Manager` and modify the counter configuration.
-    - Control the Counter UI module
-3. Counter UI:
-    - Start and print the counter with the configuration from `Counter Manager` in the terminal
+2. Countdown timer Manager:
+    - Shall initialize Countdown with the default configuration
+    - Shall accept the command from `Network Command Manager` and modify the Countdown timer configuration.
+    - Control the Countdown UI module
+3. Countdown UI:
+    - Start and print the Countdown with the configuration from `Countdown Manager` in the terminal
 
 - Commands:
-    - Counter UI refresh rate
-    - Counter Frequency
-    - Reset counter
-    - Stop counter
-    - Restart counter
+    - Countdown UI refresh rate
+    - Countdown format (seconds or milliseconds)
+    - Set Timer
+    - Reset Countdown
+    - Stop Countdown
+    - Restart Countdown
